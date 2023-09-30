@@ -1,0 +1,1350 @@
+/* 08/22/23 - Lonestamp */
+    /* Background Image */
+    body.srp,
+    body {
+       background-image: url("https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/3bc4c93f-7d3f-4930-b0b1-b941303cae0c/dg7kyj9-388a9a48-886a-4b70-baec-d83ace69ecc3.png/v1/fill/w_1194,h_669,q_70,strp/wallpaper_by_epicsteps_dg7kyj9-pre.jpg?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7ImhlaWdodCI6Ijw9ODE2IiwicGF0aCI6IlwvZlwvM2JjNGM5M2YtN2QzZi00OTMwLWIwYjEtYjk0MTMwM2NhZTBjXC9kZzdreWo5LTM4OGE5YTQ4LTg4NmEtNGI3MC1iYWVjLWQ4M2FjZTY5ZWNjMy5wbmciLCJ3aWR0aCI6Ijw9MTQ1NiJ9XV0sImF1ZCI6WyJ1cm46c2VydmljZTppbWFnZS5vcGVyYXRpb25zIl19._s9bFgWYapodBNSuwR_rB4OmPiUtkdYqQ5tiHNyqBbM");
+       /* https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/3c097e07-ab69-4781-adcd-22c2d9af8902/dg67q3m-08509255-bc47-4991-8b43-d7d434a846f3.png/v1/fill/w_894,h_894,q_70,strp/futaba_by_wabisabiwonders_dg67q3m-pre.jpg?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7InBhdGgiOiJcL2ZcLzNjMDk3ZTA3LWFiNjktNDc4MS1hZGNkLTIyYzJkOWFmODkwMlwvZGc2N3EzbS0wODUwOTI1NS1iYzQ3LTQ5OTEtOGI0My1kN2Q0MzRhODQ2ZjMucG5nIiwiaGVpZ2h0IjoiPD0xMjgwIiwid2lkdGgiOiI8PTEyODAifV1dLCJhdWQiOlsidXJuOnNlcnZpY2U6aW1hZ2Uud2F0ZXJtYXJrIl0sIndtayI6eyJwYXRoIjoiXC93bVwvM2MwOTdlMDctYWI2OS00NzgxLWFkY2QtMjJjMmQ5YWY4OTAyXC93YWJpc2FiaXdvbmRlcnMtNC5wbmciLCJvcGFjaXR5Ijo5NSwicHJvcG9ydGlvbnMiOjAuNDUsImdyYXZpdHkiOiJjZW50ZXIifX0.mmqxdECihmQYjmAC_iVVlaW6Wrhez_C7GYOcpbyGA-I */
+       /* https://i.pinimg.com/564x/93/7d/92/937d929275402d2ad2b06a49a792db3e.jpg */
+       /* https://i.ibb.co/P1cYKGQ/Glass-Pane-BG.png */
+       /* https://i.pinimg.com/564x/58/19/ed/5819ed0e291fb21c87c5b444bf64f293.jpg */
+       /* https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/3c097e07-ab69-4781-adcd-22c2d9af8902/dg67q3m-08509255-bc47-4991-8b43-d7d434a846f3.png/v1/fill/w_894,h_894,q_70,strp/futaba_by_wabisabiwonders_dg67q3m-pre.jpg?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7InBhdGgiOiJcL2ZcLzNjMDk3ZTA3LWFiNjktNDc4MS1hZGNkLTIyYzJkOWFmODkwMlwvZGc2N3EzbS0wODUwOTI1NS1iYzQ3LTQ5OTEtOGI0My1kN2Q0MzRhODQ2ZjMucG5nIiwiaGVpZ2h0IjoiPD0xMjgwIiwid2lkdGgiOiI8PTEyODAifV1dLCJhdWQiOlsidXJuOnNlcnZpY2U6aW1hZ2Uud2F0ZXJtYXJrIl0sIndtayI6eyJwYXRoIjoiXC93bVwvM2MwOTdlMDctYWI2OS00NzgxLWFkY2QtMjJjMmQ5YWY4OTAyXC93YWJpc2FiaXdvbmRlcnMtNC5wbmciLCJvcGFjaXR5Ijo5NSwicHJvcG9ydGlvbnMiOjAuNDUsImdyYXZpdHkiOiJjZW50ZXIifX0.mmqxdECihmQYjmAC_iVVlaW6Wrhez_C7GYOcpbyGA-I */
+       background-repeat: no-repeat;
+       object-fit: cover;
+       background-attachment: fixed;
+       background-size: 1480px 100vh !important;
+       color: #bdc1c6; /* Heading */
+    }
+    /* end */
+    /* Img logo "Google" */
+    /*
+    .jfN4p {
+       background-image: url("");
+    }
+    */
+    /* Title of Every Web site */
+    .VuuXrf {
+       color: #f00 !important;
+    }
+    /* Link or Url */
+    cite,
+    cite a:link,
+    cite a:visited {
+       color: #062f63 !important;
+       font-style: normal;
+    }
+    /* Title of Topic */
+    .dyjrff {
+       color: #000 !important;
+    }
+    .yXK7lf em {
+       color: #05c211 !important;
+    }
+    /* Producer */
+    .YrbPuc {
+       color: #02ff71 !important;
+    }
+    /* Episodes List */
+    .zoFLnf .v771Ge {
+       color: #034f60 !important;
+       font: 14px/22px Roboto-Regular, Helvetica Neue, Arial, sans-serif;
+    }
+    /* text name */
+    .z8gr9e {
+       color: #a07c42;
+       text-shadow: 1px 0px 1px rgb(244, 244, 0.5) !important;
+    }
+    /* Video Publish & Date */
+    .FzCfme {
+       color: #0eeb26 !important;
+       text-shadow: 1px 0 1px rgb(244, 244, 0.5) !important;
+    }
+    .P7xzyf {
+       color: #18da1b !important;
+    }
+    /* Video */
+    .Uroaid {
+       color: #18cc9a !important;
+    }
+    .Zg1NU {
+       color: #f70000 !important;
+    }
+    .ITZIwc {
+       color: #00ccb9 !important;
+    }
+    .gqF9jc {
+       color: #00b636 !important;
+    }
+    .cuFRh {
+       color: #970e0e !important;
+       text-shadow: 1px 0px 1px rgb(233, 244, 0.5) !important;
+    }
+    /* Audience rating summary */
+    .Ss2Faf {
+       color: #cb02b5 !important;
+    }
+    /* line numbers */
+    .s4zfwb {
+       color: #00c4e4 !important;
+    }
+    /* Rating Star */
+    .uVGhGc {
+       background: rgba(0, 0, 0, 0.25) !important;
+       box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+       backdrop-filter: blur(5px);
+       -webkit-backdrop-filter: blur(5px);
+       border-radius: 20px;
+    }
+    .l2gNXd {
+       background-color: #fa0505 !important;
+       border-radius: 10px;
+       height: 100%;
+    }
+    /* How many ratings */
+    .ZgdoBb {
+       color: #22c414 !important;
+       text-align: center;
+    }
+    /* Search Description */
+    /* Title about */
+    .JNkvid .HnYYW {
+       color: #0015c4 !important;
+       font-size: 22px;
+       line-height: 24px;
+    }
+    /* Anchors */
+    a {
+       color: #8ab4f8 !important;
+       text-decoration: none;
+    }
+    /* The Main */
+    .main {
+       min-width: calc(
+          var(--center-abs-margin) + var(--center-width) + var(--rhs-margin) +
+             var(--rhs-width)
+       );
+       width: 100%;
+    }
+    /*Start of Google heading */
+    /* Header Background */
+    #gb {
+       background: rgba(0, 0, 0, 0.2) !important;
+       background-color: rgba(0, 0, 0, 0.2);
+       border-radius: 16px;
+       box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+       backdrop-filter: blur(5px);
+       -webkit-backdrop-filter: blur(5px);
+       border: 1px solid rgba(0, 0, 0, 0.3);
+    }
+    .gb_Ha gb_f gb_8a gb_k gb_Fc gb_Rc {
+       background: rgba(0, 0, 0, 0.2) !important;
+       background-color: rgba(0, 0, 0, 0.2);
+       border-radius: 16px;
+       box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+       backdrop-filter: blur(5px);
+       -webkit-backdrop-filter: blur(5px);
+       border: 1px solid rgba(0, 0, 0, 0.3);
+    }
+    .sfbg {
+       background: rgba(0, 0, 0, 0.2) !important;
+       background-color: rgba(0, 0, 0, 0.2);
+       border-radius: 16px;
+       box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+       backdrop-filter: blur(5px);
+       -webkit-backdrop-filter: blur(5px);
+       border: 1px solid rgba(0, 0, 0, 0.3);
+       height: 69px;
+       left: 0;
+       position: absolute;
+       width: 100%;
+    }
+    .yg51vc {
+       background: rgba(0, 0, 0, 0.2) !important;
+       background-color: rgba(0, 0, 0, 0.2);
+       border-radius: 16px;
+       box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+       backdrop-filter: blur(5px);
+       -webkit-backdrop-filter: blur(5px);
+       border: 1px solid rgba(0, 0, 0, 0.3);
+    }
+    .WE0UJf {
+       height: 43px;
+       background: rgba(0, 0, 0, 0.2) !important;
+       background-color: rgba(0, 0, 0, 0.2);
+       border-radius: 16px;
+       box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+       backdrop-filter: blur(5px);
+       -webkit-backdrop-filter: blur(5px);
+       border: 1px solid rgba(0, 0, 0, 0.3);
+    }
+    .GLI8Bc {
+       background: rgba(0, 0, 0, 0.2) !important;
+       background-color: rgba(0, 0, 0, 0.2);
+       border-radius: 16px;
+       box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+       backdrop-filter: blur(5px);
+       -webkit-backdrop-filter: blur(5px);
+       border: 1px solid rgba(0, 0, 0, 0.3);
+    }
+    [data-snc="ih6Jnb_UzDks"] {
+       background: rgba(0, 0, 0, 0.2) !important;
+       background-color: rgba(0, 0, 0, 0.2);
+       border-radius: 16px;
+       box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+       backdrop-filter: blur(5px);
+       -webkit-backdrop-filter: blur(5px);
+       border: 1px solid rgba(0, 0, 0, 0.3);
+    }
+    /* Text Gmail Nav */
+    .gb_Fc a.gb_y,
+    .gb_Fc span.gb_y {
+       color: #38ff00 !important;
+    }
+    /* Google apps */
+    .gb_Fc svg,
+    .gb_Lc.gb_Pc svg,
+    .gb_Fc .gb_7c .gb_fd,
+    .gb_Fc .gb_7c .gb_Ec,
+    .gb_Fc .gb_7c .gb_9c,
+    .gb_Lc.gb_Pc .gb_fd {
+       color: rgba(255, 179, 0, 0.87) !important;
+    }
+    /* Main Button nav */
+    /* Images, videos, Song, etc */
+    
+    .GKS7s:hover {
+       background: rgba(0, 0, 0, 0.2) !important;
+       background-color: rgba(0, 0, 0, 0.2);
+       box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+       backdrop-filter: blur(5px);
+       -webkit-backdrop-filter: blur(5px);
+    }
+    .GKS7s {
+       background: rgba(0, 0, 0, 0.2) !important;
+       background-color: rgba(0, 0, 0, 0.2);
+       box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+       backdrop-filter: blur(5px);
+       -webkit-backdrop-filter: blur(5px);
+       border-top-color: cyan !important;
+       border-right-color: cyan !important;
+       border-bottom-color: cyan !important;
+       border-left-color: cyan !important;
+       border-radius: 20px;
+    }
+    /* Clicking */
+    .NZmxZe {
+       background: rgba(0, 0, 0, 0.2) !important;
+       background-color: rgba(0, 0, 0, 0.2);
+       box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+       backdrop-filter: blur(5px);
+       -webkit-backdrop-filter: blur(5px);
+    }
+    .NZmxZe:not(.rQEFy):hover {
+       background-color: rgba(219, 222, 224, 0.46);
+       color: red;
+       border-top-color: cyan !important;
+       border-right-color: cyan !important;
+       border-bottom-color: cyan !important;
+       border-left-color: cyan !important;
+    }
+    /* Saved hover */
+    .cj2HCb.iuN0sf .w6PoOe:hover {
+       background-color: rgba(244, 245, 245, 0.22) !important;
+    }
+    /* Tools hover */
+    .ssfWCe .ZXJQ7c:hover {
+       background-image: unset;
+       background-color: rgba(255, 255, 255, 0.3);
+       color: teal !important;
+    }
+    /* Safesearch hover */
+    .CgGjZc:hover {
+       background-color: rgba(255, 255, 255, 0.28) !important;
+    }
+    /* 
+    /* Main */
+    .CvDJxb {
+       min-width: 1124px;
+       z-index: 128;
+       width: 100%;
+       position: absolute;
+       top: 20px;
+       margin-top: 6px;
+    }
+    
+    /* Header BG */
+    .sfbg {
+       background: #24409300 !important;
+       height: 69px;
+       left: 0;
+       position: absolute;
+       width: 100%;
+    }
+    .yg51vc {
+       background: #20212400 !important;
+       height: 58px;
+       padding: 0;
+       position: relative;
+       z-index: 126;
+    }
+    
+    /* Search bar | Input */
+    .RNNXgb {
+       background: rgba(0, 0, 0, 0.2) !important;
+       background-color: rgba(0, 0, 0, 0.2);
+       border-radius: 16px;
+       box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+       backdrop-filter: blur(5px);
+       -webkit-backdrop-filter: blur(5px);
+       z-index: 3;
+       background: #2d3b64;
+       border: 1px solid green;
+    }
+    /* Saafesearch */
+    .F75bid {
+       color: #36f800 !important;
+       display: inline-block;
+    }
+    /* Search Remove */
+    .ExCKkf {
+       color: #3300e8 !important;
+    }
+    .gLFyf {
+       /* input content */
+       color: #f43 !important;
+    }
+    /* remove search text "X" button */
+    .vOY7J {
+       background: #e80f0f00 !important;
+       background-color: rgba(232, 15, 15, 0);
+    }
+    /* Search Suggestion Background */
+    .aajZCb {
+       background: rgba(0, 0, 0, 0.2) !important;
+       border-radius: 16px;
+       box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+       backdrop-filter: blur(5px);
+       -webkit-backdrop-filter: blur(5px);
+       border: 1px solid rgba(0, 0, 0, 0.3);
+    }
+    /* Suggestion text */
+    .WggQGd {
+       color: #f98a8a !important;
+    }
+    .WggQGd:hover {
+       color: wheat !important;
+    }
+    .sbhl {
+       background: rgba(0, 0, 0, 0.2) !important;
+       border-radius: 16px !important;
+       box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+       backdrop-filter: blur(5px);
+       -webkit-backdrop-filter: blur(5px);
+       border: 1px solid rgba(0, 0, 0, 0.3) !important;
+    }
+    /* Google Search % Im feeling Lucky button */
+    .lJ9FBc input[type="submit"],
+    .gbqfba {
+       background-color: rgba(0, 0, 0, 0.2) !important;
+       border-radius: 16px !important;
+       box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+       backdrop-filter: blur(5px);
+       -webkit-backdrop-filter: blur(5px);
+       border: 1px solid #303134;
+       color: cyan !important;
+    }
+    .lJ9FBc input[type="submit"]:hover {
+       background: rgba(0, 0, 0, 0.2) !important;
+       box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+       backdrop-filter: blur(5px);
+       -webkit-backdrop-filter: blur(5px);
+       border: 1px solid rgba(0, 0, 0, 0.3);
+       color: red !important;
+    }
+    /* Google offered in */
+    #SIvCob {
+       color: #f809bc !important;
+    }
+    /* Separator vertical line between X-remove serch text button and Lens and mag-glass */
+    .ACRAdd.M2vV3 {
+       display: block;
+    }
+    .ACRAdd {
+       border-left: 1px solid #5f6368;
+       height: 65%;
+    }
+    /* Icons */
+    .zqrO0.k0Jjg:hover .niO4u,
+    .zqrO0.k0Jjg:hover .QuU3Wb {
+       color: #fea701 !important;
+    }
+    /* Text */
+    .KMdzJ {
+       padding-right: 4px;
+       color: #f7f30a;
+    }
+    .qd9Mkf {
+       font-size: 14px;
+       color: pink !important;
+    }
+    .hb8SAc {
+       color: #a85c24 !important;
+    }
+    .NQYJvc.OJeuxf .iCQO5d {
+       width: 40px;
+    }
+    .OZ8wsd {
+       color: #016ad3 !important;
+       font-size: 14px;
+    }
+    .zqrO0 .niO4u {
+       background-color: #00f30f !important;
+       border: 1px solid #00ffcf !important;
+       color: aliceblue !important;
+    }
+    .w8qArf {
+       font-weight: bolder;
+       color: red !important;
+    }
+    .LrzXr {
+       color: #06254b !important;
+    }
+    /* Button Claim this knowledge */
+    .H73aad {
+       background: rgba(255, 253, 253, 0.2) !important;
+       border-radius: 16px;
+       box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+       backdrop-filter: blur(5px);
+       -webkit-backdrop-filter: blur(5px);
+       /*border: 1px solid rgba(255, 253, 253, 0.34);*/
+    }
+    .H73aad:hover {
+       background: #303134;
+    }
+    /* See More */
+    .ZFiwCf {
+       background: rgba(255, 253, 253, 0.2) !important;
+       box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+       backdrop-filter: blur(5px);
+       -webkit-backdrop-filter: blur(5px);
+    }
+    /* feedback */
+    .PmPt7d {
+       color: #00ffc3 !important;
+       font-size: 12px;
+       line-height: 16px;
+    }
+    .ZFiwCf:hover {
+       background-color: #08d0983d !important;
+    }
+    /* People also search for */
+    .JNkvid .HnYYW {
+       color: #ea0079 !important;
+    }
+    .f3LoEf {
+       color: #397c5f !important;
+    }
+    .XaIwc {
+       color: #d6bd82 !important;
+    }
+    /* The lens property */
+    .nDcEnd {
+       background: #c9121200 !important;
+    }
+    /* The magnifying glass float to right property holder */
+    .Tg7LZd {
+       background: #d1191900 !important;
+    }
+    /* The magnifying Glass */
+    .zgAlFc {
+       color: #8ab4f8 !important;
+    }
+    /* All Images, Videos, etc */
+    .hdtb-mitem a {
+       color: #db0000 !important;
+    }
+    /* More & Tools */
+    .hdtb-mitem .GOE98c,
+    .hdtb-mitem a,
+    .hdtb-mitem.hdtb-msel,
+    .t2vtad {
+       color: #0ff !important;
+       text-decoration: none;
+    }
+    /* Search Bar When No Matches */
+    .fzR8he {
+       background-color: rgba(255, 253, 253, 0.25) !important;
+       color: Black !important;
+    }
+    /* About 540... */
+    .WE0UJf {
+       background-color: rgba(0, 0, 0, 0.2) !important;
+       box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1) !important;
+       backdrop-filter: blur(5px) !important;
+       -webkit-backdrop-filter: blur(5px) !important;
+    }
+    /* Title of Searched */
+    .ssJ7i {
+       color: #f5c50a !important;
+    }
+    /* Subtitle */
+    .iAIpCb {
+       color: #0ee41b !important;
+    }
+    /* When search of movies cast text */
+    .T9EeC div {
+       color: red !important;
+    }
+    /* Cast name */
+    .oyj2db {
+       -webkit-box-orient: vertical;
+       color: #d10dbb !important;
+       font-size: 20px Important;
+    }
+    /* Cast Role */
+    .Bo9xMe {
+       color: #7b00f6 !important;
+       font-size: 12px !important;
+    }
+    /* Background */
+    .nZWEZc .ttwCMe {
+       background: rgba(0, 0, 0, 0.25) !important;
+       box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+       backdrop-filter: blur(5px);
+       -webkit-backdrop-filter: blur(5px);
+    }
+    /* Buttom more */
+    .sr9hec {
+       background: rgba(0, 0, 0, 0.25) !important;
+       box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+       backdrop-filter: blur(5px);
+       -webkit-backdrop-filter: blur(5px);
+    }
+    .wgbRNb.T9Wh5:hover g-fab {
+       color: #0de7e7 !important;
+       box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.04), 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+       background-color: red !important;
+    }
+    .T9EeC:hover div {
+       color: #06c7db !important;
+    }
+    .Maj6Tc {
+       border: 1px solid aqua !important;
+    }
+    .NQyKp {
+       background: rgba(0, 0, 0, 0.2) !important;
+       box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+       backdrop-filter: blur(5px);
+       -webkit-backdrop-filter: blur(5px);
+    }
+    .REySof {
+       background-color: #0000008f !important;
+       box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    }
+    /* text */
+    #result-stats {
+       color: red !important;
+    }
+    /* Search Result Query */
+    /*
+    #search {
+       background-color: ;
+    }
+    */
+    /* Search Result Background */
+    .rsGxI.Ww4FFb,
+    .Ww4FFb {
+       background-color: rgba(255, 253, 253, 0.25) !important;
+       border-radius: 16px !important;
+       box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1) !important;
+       backdrop-filter: blur(5px);
+       -webkit-backdrop-filter: blur(5px);
+       border: 1px solid rgba(255, 253, 253, 0.34);
+    }
+    .rsGxI.Ww4FFb,
+    .Ww4FFb {
+       background-color: rgba(255, 253, 253, 0.25) !important;
+       box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1) !important;
+       backdrop-filter: blur(5px);
+       -webkit-backdrop-filter: blur(5px);
+    }
+    /* Text in search result */
+    .uzjuFc {
+       color: skyblue !important;
+    }
+    /* setting icon fill color */
+    .fLciMb {
+       color: #e8eaed !important;
+    }
+    /* Fill all special toggle icon */
+    .z1asCe {
+       fill: red !important; /* Modify this */
+    }
+    /* Displai property to setting, more on "Google", and Profile icon */
+    .gb_Qd {
+       padding: 4px;
+       padding-left: 4px;
+    }
+    gb_Qd {
+       display: inline-block;
+       vertical-align: middle;
+    }
+    /* Background for Main color content */
+    .gb_2e {
+       background: yellow;
+       -moz-border-radius: 4px;
+       border-radius: 4px;
+       color: #fff;
+       position: absolute;
+       z-index: 1000;
+       -moz-osx-font-smoothing: grayscale;
+    }
+    .gb_Fc {
+       text-align: left;
+    }
+    .gb_Fc > * {
+       color: #bdc1c6;
+       line-height: 16px;
+    }
+    .gb_Fc div:first-child {
+       color: white;
+    }
+    .gb_ea {
+       background: none;
+       border: 1px solid transparent;
+    }
+    .gb_ea:hover {
+       background-color: rgba(68, 71, 70, 0.08) !important;
+    }
+    .gb_ea:focus,
+    .gb_ea:active {
+       background-color: rgba(68, 71, 70, 0.12) !important;
+    }
+    .gb_ea:focus-visible {
+       border-color: #0b57d0 !important;
+       outline: 1px solid transparent;
+       outline-offset: -1px;
+    }
+    .gb_i .gb_ea:hover,
+    .gb_i .gb_ea:focus,
+    .gb_i .gb_ea:active {
+       background-color: rgba(227, 227, 227, 0.08) !important;
+    }
+    .gb_i .gb_ea:focus-visible {
+       border-color: #a8c7fa;
+    }
+    /* end */
+    /* Img logo "Google" */
+    /*.jfN4p {
+       background-image: url("");
+    }*/
+    
+    /* Anchors */
+    a {
+       color: #8ab4f8;
+    }
+    /* The Main */
+    .main {
+       min-width: calc(
+          var(--center-abs-margin) + var(--center-width) + var(--rhs-margin) +
+             var(--rhs-width)
+       );
+       width: 100%;
+    }
+    /*Start of Google heading */
+    /* Main */
+    .CvDJxb {
+       min-width: 1124px;
+       z-index: 128;
+       width: 100%;
+       position: absolute;;
+    }
+    
+    /* Search bar | Input */
+    .RNNXgb {
+       background: red;
+       border: 1px solid transparent;
+       box-shadow: 0 1px 3px rgba(23, 23, 23, 0.24);
+    }
+    .gLFyf {
+       /* input content */
+       background-color: transparent;
+       color: #f43 !important;
+    }
+    /* remove search text "X" button */
+    .vOY7J {
+       background: #e80f0f00;
+       background-color: rgba(232, 15, 15, 0) !important;
+    }
+    /* Shine Effects of Image */
+    img {
+       border-radius: 10px;
+       -webkit-mask-image: linear-gradient(
+          45deg,
+          #fff 25%,
+          rgba(255, 255, 255, 0.2) 50%,
+          #fff 75%
+       );
+       mask-image: linear-gradient(
+          45deg,
+          #fff 25%,
+          rgba(255, 255, 255, 0.2) 50%,
+          #fff 75%
+       );
+       -webkit-mask-size: 800%;
+       mask-size: 800%;
+       -webkit-mask-position: 0;
+       mask-position: 0;
+       animation: infinite-scroll 9s linear infinite;
+    }
+    @keyframes infinite-scroll {
+       0% {
+          -webkit-mask-position: 0;
+          mask-position: 0;
+       }
+       100% {
+          -webkit-mask-position: -120%;
+          mask-position: -120%;
+       }
+    }
+    /* Separator vertical line between X-remove serch text button and Lens and mag-glass */
+    .ACRAdd.M2vV3 {
+       display: block;
+    }
+    .ACRAdd {
+       border-left: 1px solid #5f6368;
+       height: 65%;
+    }
+    /* The lens property */
+    .nDcEnd {
+       background: #c9121200 !important;
+    }
+    /* The magnifying glass float to right property holder */
+    .Tg7LZd {
+       background: #d1191900 !important;
+    }
+    /* The magnifying Glass */
+    .zgAlFc {
+       background: none;
+       color: #8ab4f8 !important;
+    }
+    
+    /* Search Bar When No Matches */
+    .fzR8he {
+       background: rgba(0, 0, 0, 0.2) !important;
+       box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+       backdrop-filter: blur(5px);
+       -webkit-backdrop-filter: blur(5px);
+       color: Black;
+    }
+    /* Search Result Query */
+    /*
+    #search {
+       background-color: ;
+    }*/
+    /* Text in search result */
+    .uzjuFc {
+       color: skyblue !important;
+    }
+    /* setting icon fill color */
+    .fLciMb {
+       border-radius: 50%;
+       color: #e8eaed !important;
+    }
+    /* Fill all special toggle icon */
+    .z1asCe {
+       fill: red !important; /* Modify this */
+    }
+    /* Displai property to setting, more on "Google", and Profile icon */
+    .gb_Qd {
+       padding: 4px;
+       padding-left: 4px;
+    }
+    gb_Qd {
+       display: inline-block;
+       vertical-align: middle;
+    }
+    /* Previews of how many result from your searched text "About 25, 270,000, 000 results". Background set */
+    .appbar {
+       background: /*rgba(0, 0, 0, 0.2)*/ transparent !important;
+       box-shadow: /*0 4px 30px rgba(0, 0, 0, 0.1)*/ none !important;
+       /*backdrop-filter: blur(5px);
+    border-radius: 16px;
+    -webkit-backdrop-filter: blur(5px);*/
+       position: relative;
+       /*-webkit-box-sizing: border-box;*/
+       margin-left: var(--center-abs-margin);
+       border-top-color: rgba(119, 111, 98, 0) !important;
+       border-top: 1px solid #3c404300 !important;
+    }
+    /* Text color */
+    .LHJvCe {
+       color: #9aa0a6;
+       line-height: 43px;
+    }
+    /* Font family */
+    #result-stats {
+       white-space: nowrap;
+       font-family: Google Sans, arial, sans-serif;
+    }
+    /* Top-nav */
+    
+    /* The background of navigation of all search query */
+    .yg51vc {
+       background: #202124;
+       height: 58px;
+       padding: 0;
+       position: relative;
+       z-index: 126;
+    }
+    .IC1Ck {
+       position: relative;
+       white-space: nowrap;
+       align-items: baseline;
+       display: flex;
+       -ms-flex-pack: justify;
+       float: left;
+       justify-content: space-between;
+       min-width: calc(
+          var(--center-abs-margin) + 652px
+       ); /* The tools button will adjust if removed the width value */
+    }
+    /* The top navigation | All-Videos-Images " " " " */
+    .GLcBOb {
+       color: #0683ff !important;
+    }
+    .GLcBOb {
+       border-bottom: 1px solid #3c4043;
+       margin-top: -21px;
+       position: relative;
+       z-index: 126;
+    }
+    /* The Tools button */
+    .t2vtad {
+       border: 1px solid #bb0d0d00 !important;
+    }
+    /* The relevant information query background */
+    #search {
+       color: #8ab4f8 !important;
+    }
+    /* Margin top the search result info */
+    .v7W49e {
+       margin-top: 6px;
+    }
+    /* heading of search result when searching for vocabulary word "Dictionary" */
+    .d2F2Td {
+       font-family: Google Sans, arial, sans-serif;
+       font-size: 22px;
+       line-height: 28px;
+    }
+    .gJBeNe {
+       display: inline-block;
+    }
+    /* Footer text */
+    pHiOh,
+    a.pHiOh {
+       color: #ffa700 !important;
+    }
+    a:hover {
+       text-decoration: underline;
+       color: pink !important;
+    }
+    /* Related Searches */
+    .k8XOCe:hover,
+    .k8XOCe:active {
+       color: #10ff1f !important;
+    }
+    a:hover {
+       text-decoration: underline;
+    }
+    /* Text Header */
+    .RES9jf {
+       color: #06f !important;
+    }
+    /* Text Color */
+    .s75CSd {
+       color: #00dbff !important;
+    }
+    /* Background */
+    .k8XOCe {
+       background: rgba(255, 253, 253, 0.25) !important;
+       box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+       backdrop-filter: blur(5px);
+       -webkit-backdrop-filter: blur(5px);
+       border: 1px solid rgba(255, 253, 253, 0.34);
+       /*border-radius: 100px;*/
+       box-sizing: border-box;
+       position: relative;
+    }
+    .k8XOCe:hover {
+       background-color: #10ff1f !important;
+    }
+    /* Footer */
+    /* Footer in Google Search Engine */
+    /* Background */
+    .c93Gbe {
+       background: rgba(0, 0, 0, 0.2) !important;
+       box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+       backdrop-filter: blur(5px);
+       -webkit-backdrop-filter: blur(5px);
+       border: 1px solid rgba(0, 0, 0, 0.3);
+    }
+    .uU7dJb {
+       border-bottom: 1px solid #00ffe7;
+       font-size: 15px;
+       color: #42f900 !important;
+       display: flex;
+    }
+    /* Search result or Query result */
+    .f6F9Be {
+       background: rgba(255, 253, 253, 0.25) !important;
+       /*border-radius: 16px !important;*/
+       box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+       backdrop-filter: blur(5px);
+       -webkit-backdrop-filter: blur(5px);
+       border: 1px solid rgba(255, 253, 253, 0.34) !important;
+    }
+    /* Anchor */
+    a {
+       color: #f7a200 !important;
+       cursor: pointer !important;
+    }
+    .ayzqOc:hover {
+       text-decoration: underline;
+       color: wheat !important;
+    }
+    .pHiOh,
+    a.pHiOh {
+       color: #11bc3c !important;
+    }
+    /* Country */
+    .b0KoTc {
+       color: #05e413 !important;
+    }
+    /* City */
+    .dfB0uf {
+       color: #00ffe7 !important;
+       font-weight: bold;
+    }
+    /* List style */
+    .unknown_loc {
+       background: #0d10b3 !important;
+    }
+    a:hover h3.LC20lb {
+       text-decoration: underline;
+       color: aquamarine !important;
+    }
+    /* Text description */
+    .yDYNvb.lyLwlc {
+       color: #ff0e52 !important;
+    }
+    title-with-lhs-icon:hover .ekf0x h3 {
+       color: #e61024 !important;
+    }
+    /* Button View All */
+    .S8ee5.CwbYXd {
+       color: #ffcb00 !important;
+       line-height: 22px;
+    }
+    /* See all images bottom */
+    .ZkkK1e {
+       position: relative;
+       background: rgba(255, 253, 253, 0.2) !important;
+       box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+       backdrop-filter: blur(5px);
+       -webkit-backdrop-filter: blur(5px);
+       border: 1px solid rgba(255, 253, 253, 0.34);
+       color: #17a45b !important;
+    }
+    .S8ee5.CwbYXd {
+       color: #e8eaed !important;
+       line-height: 22px;
+    }
+    .S8ee5 {
+       background: rgba(255, 253, 253, 0.25) !important;
+       box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+       backdrop-filter: blur(5px);
+       -webkit-backdrop-filter: blur(5px);
+       border: 1px solid rgba(255, 253, 253, 0.34);
+    }
+    /* hr */
+    .rhHIGd {
+       background: rgba(255, 253, 253, 0.25) !important;
+       box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+       backdrop-filter: blur(5px);
+       -webkit-backdrop-filter: blur(5px);
+       border: 1px solid rgba(255, 253, 253, 0.34);
+       border-radius: 16px;
+    }
+    .GCSyeb {
+       background: #00c4b2 !important;
+    }
+    .Hwkikb.WY0eLb {
+       border-left: 1px solid #1bdfff !important;
+    }
+    .MsCHpb {
+       border-color: #00ffb7 !important;
+       margin-top: 20px;
+    }
+    .b2hzT {
+       border-bottom: 1px solid #e90000 !important;
+    }
+    #swml {
+       border-left: 1px solid #f90606 !important;
+    }
+    /* Background of */
+    .FalWJb {
+       background: rgba(255, 253, 253, 0.2) !important;
+       border-radius: 16px;
+       box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+       backdrop-filter: blur(5px);
+       -webkit-backdrop-filter: blur(5px);
+       border: 1px solid rgba(255, 253, 253, 0.34);
+    }
+    /* Border top */
+    .YeThId {
+       border-top: 1px solid #297ebe00 !important;
+    }
+    .k24kee {
+       position: relative;
+       background: rgba(255, 253, 253, 0.2) !important;
+       border-radius: 16px;
+       box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+       backdrop-filter: blur(5px);
+       -webkit-backdrop-filter: blur(5px);
+       border: 1px solid rgba(255, 253, 253, 0.34);
+    }
+    /* Text */
+    .Cx1ZMc {
+       color: #c4313f !important;
+    }
+    /* Video Episode Season list nav | Overview etc */
+    .lmqm0b {
+       background: rgba(255, 253, 253, 0.2) !important;
+       border-radius: 16px !important;
+       box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+       backdrop-filter: blur(5px);
+       -webkit-backdrop-filter: blur(5px);
+       border: 1px solid rgba(255, 253, 253, 0.34);
+    }
+    /* Text */
+    a .SuDEy,
+    a:visited .SuDEy {
+       color: #00d165 !important;
+    }
+    /* Publisher */
+    .DbaDvc {
+       color: #ff064c !important;
+    }
+    /* Realated Searches Magnify Glass Img */
+    .aXBZVd {
+       background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24'%3E%3Cpath fill='rgba(255,255,255,.54)' d='M20.49 19l-5.73-5.73C15.53 12.2 16 10.91 16 9.5 16 5.91 13.09 3 9.5 3S3 5.91 3 9.5 5.91 16 9.5 16c1.41 0 2.7-.47 3.77-1.24L19 20.49 20.49 19zM5 9.5C5 7.01 7.01 5 9.5 5S14 7.01 14 9.5 11.99 14 9.5 14 5 11.99 5 9.5z'/%3E%3C/svg%3E");
+    }
+    /* Nav videos Content */
+    /* Header or Nav */
+    .Lj9fsd.DU1Mzb {
+       background: rgba(255, 253, 253, 0.2) !important;
+       box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1) !important;
+       backdrop-filter: blur(5px) !important;
+       -webkit-backdrop-filter: blur(5px) !important;
+    }
+    .s8GCU {
+       background: rgba(32, 33, 36, 0);
+       height: 75px;
+       min-height: 75px;
+    }
+    .Lj9fsd {
+       background: rgba(255, 253, 253, 0.2) !important;
+       box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1) !important;
+       backdrop-filter: blur(5px) !important;
+       -webkit-backdrop-filter: blur(5px) !important;
+       padding-top: 6px;
+       position: absolute;
+       top: 20px;
+       width: 100%;
+       z-index: 4;
+    }
+    .jZWadf {
+       background: rgba(255, 253, 253, 0.2) !important;
+       box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1) !important;
+       backdrop-filter: blur(5px) !important;
+       -webkit-backdrop-filter: blur(5px) !important;
+       display: flex;
+       flex-direction: row;
+       justify-content: space-between;
+       border-bottom: 0;
+    }
+    /* Search bar */
+    .Lj9fsd.DU1Mzb .o6juZc {
+       background: rgba(255, 253, 253, 0.2) !important;
+       box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1) !important;
+       backdrop-filter: blur(5px);
+       -webkit-backdrop-filter: blur(5px) !important;
+       border-color: cyan;
+    }
+    .o6juZc {
+       z-index: 3;
+       background: rgba(255, 253, 253, 0.2) !important;
+       box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1) !important;
+       backdrop-filter: blur(5px);
+       -webkit-backdrop-filter: blur(5px) !important;
+       border-color: cyan !important;
+    }
+    /* Search TExt */
+    .og3lId {
+       background-color: transparent;
+       font-size: 16px;
+       color: rgb(205, 3, 3) !important;
+    }
+    /* Video source */
+    .mEQved {
+       color: #0edff5 !important;
+    }
+    /* Videeo Source Description */
+    .zbRPDe {
+       color: rgb(23, 254, 26) !important;
+    }
+    /* Shopping */
+    /* Settings */
+    .fLciMb {
+       border-radius: 50%;
+       color: #10ef52 !important;
+    }
+    .gbZSUe:hover,
+    .gbZSUe:active {
+       background: #0de02436;
+    }
+    .gbZSUe {
+       color: #00ffcf !important;
+    }
+    /* apps */
+    .gb_Ha svg,
+    .gb_Lc svg,
+    .gb_7c .gb_fd,
+    .gb_Wc .gb_fd {
+       color: #10e9df !important;
+       opacity: 1;
+    }
+    /* favorites main */
+    .vt5bSb {
+       background-color: #ff0606 !important;
+       position: relative;
+    }
+    /* Country */
+    .CV7Lzb {
+       color: #ff12cf !important;
+    }
+    .vkYnff {
+       color: violet !important;
+    }
+    /* favorite */
+    .jJQNbd {
+       background-color: #13e6ab !important;
+    }
+    /* Price */
+    .ECBYL .sh-dr__g {
+       border: 1px solid #0effff !important;
+    }
+    /* Product Rating */
+    .cNaB2e {
+       color: #7f1488 !important;
+    }
+    /* Radio */
+    .pZMdO .JcqPK {
+       border-color: #e9141e !important;
+       border-radius: 10px;
+    }
+    .pZMdO .EQ4p8c {
+       color: #c29f16 !important;
+    }
+    .pZMdO .ELcVZ {
+       color: #10f73f !important;
+    }
+    /* Product Background */
+    .i0X6df {
+       background: rgba(255, 253, 253, 0.2) !important;
+       box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1) !important;
+       backdrop-filter: blur(5px) !important;
+       -webkit-backdrop-filter: blur(5px) !important;
+       border-radius: 8px;
+    }
+    .cEW58 {
+       background: rgba(255, 253, 253, 0.2) !important;
+       box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1) !important;
+       backdrop-filter: blur(5px) !important;
+       -webkit-backdrop-filter: blur(5px) !important;
+       z-index: 2;
+    }
+    /* Circle Add */
+    .dyAbMb {
+       fill: #19a16e8f !important;
+    }
+    /* add to favorites */
+    .UUvOXe {
+       background: rgba(255, 253, 253, 0.2) !important;
+       box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1) !important;
+       backdrop-filter: blur(5px) !important;
+       -webkit-backdrop-filter: blur(5px) !important;
+       border-radius: 100%;
+       height: 100%;
+       opacity: 0.97;
+       position: absolute;
+    }
+    :not(.trzmpb).sh-ssb__unsaved-icon-background {
+       background-color: #0fe6d2 !important;
+       -webkit-mask-image: url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIyNHB4IiBoZWlnaHQ9IjI0cHgiIHZpZXdCb3g9IjAgMCAyNCAyNCIgZmlsbD0iIzc1NzU3NSI+CiAgICA8cGF0aCBkPSJNMTcgM0g3Yy0xLjEgMC0xLjk5LjktMS45OSAyTDUgMjFsNy0zIDcgM1Y1YzAtMS4xLS45LTItMi0yem0wIDE1bC01LTIuMThMNyAxOFY1aDEwdjEzeiIvPgogICAgPHBhdGggZD0iTTAgMGgyNHYyNEgweiIgZmlsbD0ibm9uZSIvPgo8L3N2Zz4K);
+       mask-image: url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIyNHB4IiBoZWlnaHQ9IjI0cHgiIHZpZXdCb3g9IjAgMCAyNCAyNCIgZmlsbD0iIzc1NzU3NSI+CiAgICA8cGF0aCBkPSJNMTcgM0g3Yy0xLjEgMC0xLjk5LjktMS45OSAyTDUgMjFsNy0zIDcgM1Y1YzAtMS4xLS45LTItMi0yem0wIDE1bC01LTIuMThMNyAxOFY1aDEwdjEzeiIvPgogICAgPHBhdGggZD0iTTAgMGgyNHYyNEgweiIgZmlsbD0ibm9uZSIvPgo8L3N2Zz4K);
+    }
+    .vEjMR {
+       color: #ff0ece !important;
+    }
+    /* Price */
+    .XrAfOe,
+    .bONr3b {
+       color: #2a11d6 !important;
+    }
+    .a8Pemb {
+       color: #11ff15 !important;
+    }
+    /* Flights */
+    /* Nav buttons */
+    .VfPpkd-LgbsSe-OWXEXe-INsAgc .VfPpkd-Jh9lGc {
+       border-style: solid;
+       background: rgba(255, 253, 253, 0.2) !important;
+       box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1) !important;
+       backdrop-filter: blur(5px) !important;
+       -webkit-backdrop-filter: blur(5px) !important;
+    }
+    .e1Tapf:not(:disabled) {
+       border-color: #00ffc3 !important;
+    }
+    .e1Tapf.VfPpkd-LgbsSe-OWXEXe-dgl2Hf {
+       margin-top: 4px;
+       margin-bottom: 4px;
+    }
+    .e1Tapf:not(:disabled) {
+       color: #06e03d !important;
+    }
+    /* Flight text */
+    .Eo39gc {
+       color: #d7c31f !important;
+    }
+    /* Content text */
+    .CQYfx {
+       color: #52e80e !important;
+    }
+    .ZSxxwc {
+       color: #fb0303 !important;
+    }
+    /* Price */
+    .QB2Jof {
+       color: #0bfdfd !important;
+    }
+    /* explore button */
+    .xFFcie {
+       background: rgba(255, 253, 253, 0.2) !important;
+       box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1) !important;
+       backdrop-filter: blur(5px) !important;
+       -webkit-backdrop-filter: blur(5px) !important;
+       border-radius: 24px;
+      }
+    /*
+    :where(body):where(
+          :not(.S7wXqe):not([data-theme="dark"]):not([data-theme="light"])
+       )*/
+       .AjY5Oe:not(:disabled) {
+       color: rgb(255, 0, 24) !important;
+      }
+    /*
+    :where(body):where(
+          :not(.S7wXqe):not([data-theme="dark"]):not([data-theme="light"])
+       )*/
+       .AjY5Oe:not(:disabled) {
+       background: rgba(255, 253, 253, 0.2) !important;
+       box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1) !important;
+       backdrop-filter: blur(5px) !important;
+       -webkit-backdrop-filter: blur(5px) !important;
+    }
+      /* Background */
+    /*
+    body:where(:not(.S7wXqe):not([data-theme="dark"]):not([data-theme="light"]))*/
+       .AaN0Dd {
+       background: rgba(255, 253, 253, 0.2) !important;
+       box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1) !important;
+       backdrop-filter: blur(5px) !important;
+       -webkit-backdrop-filter: blur(5px) !important;
+    }
+    .plvncb {
+       background: rgba(255, 253, 253, 0.2) !important;
+       box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1) !important;
+       backdrop-filter: blur(5px) !important;
+       -webkit-backdrop-filter: blur(5px) !important;
+       margin: 24px 0;
+       border-radius: 10px;
+    }
+    /* Things to do */
+    .E4DaWc {
+       background: rgba(255, 253, 253, 0.2) !important;
+       box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1) !important;
+       backdrop-filter: blur(5px) !important;
+       -webkit-backdrop-filter: blur(5px) !important;
+       margin: 24px 0;
+       border-radius: 10px;
+       position: relative;
+       z-index: 3;
+    }
+    /* Side Nav */
+    .Gk0HC {
+       background: rgba(255, 253, 253, 0.2) !important;
+       box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1) !important;
+       backdrop-filter: blur(5px) !important;
+       -webkit-backdrop-filter: blur(5px) !important;
+    }
+    /* Button */
+    .nCOOmf:not(:disabled):hover {
+       color: #bb0c0c !important;
+    }
+    /* suggestion destination */
+    .BgYkof {
+       color: #3bf707 !important;
+    }
+    /* Locat */
+    .sSHqwe {
+       color: #00ffcf !important;
+    }
+    .GDEAO {
+       color: #f61594 !important;
+    }
+    /* Button prices */
+    .nCP5yc:not(:disabled) {
+       background: rgba(255, 253, 253, 0.2) !important;
+       box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1) !important;
+       backdrop-filter: blur(5px) !important;
+       -webkit-backdrop-filter: blur(5px) !important;
+    }
+    /* Icons */
+    .HlxIlc .bX73z.lh4a3 {
+       -moz-box-align: center;
+       align-items: center;
+       color: #ffd700 !important;
+    }
+    /* Icons */
+    .HlxIlc .bX73z.lh4a3 {
+       color: #ffd700 !important;
+    }
+    /* Rating numbers */
+    .oz2bpb {
+       color: #f14a08 !important;
+    }
+    /* Favorites */
+    .PxBNzf:not(:disabled) {
+       color: #00d7fa !important;
+    }
+    /* country */
+    .xyGai {
+       color: #f30a82 !important;
+       font-weight: bolder;
+    }
+    /* Scroll */
+    * {
+       scrollbar-color: #005b92 #202324 !important;
+    }
